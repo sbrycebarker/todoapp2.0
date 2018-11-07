@@ -1,0 +1,48 @@
+<div class="box">
+  <h3>TO DO LIST</h3>
+
+<div class="sidebar">
+<a class="button-primary bttns" href="/auth"><h1>{{user}}</h1></a>
+
+<button class="dropdown button-primary bttns">
+  <div ng-click="showmenu = !showmenu">
+    <h1>New Task</h1>
+  </div>
+<new-task ng-show="showmenu"></new-task>
+</button>
+
+<a class="button-primary bttns" href="/auth/logout"><h1>Logout</h1></a>
+
+  <button class="button-primary bttns" ui-sref="about"><h1>About<h1></button>
+
+</div>
+
+
+
+<div class="stuffcon">
+<div class="stuff" ng-repeat="data in data | startFrom: (currentPage - 1) * pageSize  | limitTo: pageSize | orderBy: 'task_id'">
+<ul>
+    <div class="task">
+      <div>
+    TASK : {{data.task}}
+      </div>
+      <div>
+        <img class="cal" src="./views/img/whitecal.png">{{data.task_date}}
+       </div>
+    </div>
+</ul>
+
+
+  <input id="update" class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
+
+  <button id="change" class="change" ng-click="changeData( { id : data.task_id , newtask: item }, $index )"> Change Task</button>
+
+  <button class="delete" ng-click="deleteText(data.task_id, $index)"><i class="fa fa-trash trash" aria-hidden="true"></i></buttom>
+
+</div>
+</div>
+<div class="pagenav"><ul class="pages" uib-pagination total-items="data.length" ng-model="currentPage" items-per-page="pageSize"></ul></div>
+
+
+
+</div>

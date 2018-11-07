@@ -1,0 +1,32 @@
+{
+  "name": "todoapp2.0",
+  "version": "1.0.0",
+  "description": "Remake of todoapp",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbrycebarker/todoapp2.0.git"
+  },
+  "author": "Sergio Barker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbrycebarker/todoapp2.0/issues"
+  },
+  "homepage": "https://github.com/sbrycebarker/todoapp2.0#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "http": "0.0.0",
+    "massive": "^5.5.1",
+    "moment": "^2.22.2",
+    "passport": "^0.4.0",
+    "passport-auth0": "^1.1.0",
+    "request": "^2.88.0"
+  }
+}
