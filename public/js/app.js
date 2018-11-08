@@ -13,9 +13,9 @@ angular.module('myApp', ['ui.router', 'ui.bootstrap']).config(function($urlRoute
         })
 .filter('startFrom', function() {
             return function(data, start) {
-              if (start == undefined) {
+              if (start === undefined) {
                 return "ready"
-              } else {
+              } if (data) {
                 return data.slice(start);
               }
             }
