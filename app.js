@@ -20,7 +20,7 @@ const express = require('express'),
       app.use(session({
         resave: true, //Without this you get a constant warning about default values
         saveUninitialized: true, //Without this you get a constant warning about default values
-        secret: config.secret
+        secret: 'pizzaisgood'
       }))
       app.use(passport.initialize());
       app.use(passport.session());
@@ -136,7 +136,7 @@ const express = require('express'),
 
       app.get('/auth/me', function(req, res) {
         if (!req.user) return res.sendStatus(404);
-        console.log("me", req.user)
+        // console.log("me", req.user)
         res.status(200).send(req.user);
       })
 

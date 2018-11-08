@@ -3,12 +3,12 @@ angular.module('myApp', ['ui.router', 'ui.bootstrap']).config(function($urlRoute
           $stateProvider
           .state('home', {
             url: '/',
-            templateUrl: "./html/main.html",
+            templateUrl: "./views/main.html",
             controller: 'mainCtrl'
           })
           .state('about', {
             url: '/about',
-            templateUrl: "./html/about.html"
+            templateUrl: "./views/about.html"
           })
         })
 .filter('startFrom', function() {

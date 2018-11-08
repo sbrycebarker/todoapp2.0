@@ -42,7 +42,7 @@ angular.module('myApp').service('mainService', function($http) {
         return res.data;
       })
       .catch(function(err) {
-        console.log("err")
+        console.log(err)
       })
 
       this.logout = function() {
